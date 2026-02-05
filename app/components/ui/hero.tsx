@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl md:px-6 px-4 py-24 text-center">
         {/* Headline */}
         <AnimatedItem index={0} delay={0.05}>
-          <h1 className="mx-auto max-w-3xl xl:text-4xl md:text-3xl text-2xl font-[400] leading-tighter text-[var(--tertiary)] md:text-5xl md:pt-20 pt-16">
+          <h1 className="mx-auto max-w-3xl text-4xl text-2xl font-[400] leading-tighter text-[var(--tertiary)] md:text-5xl md:pt-20 pt-16">
             30 Days Free Trial for
             <span className="text-[var(--primary)]">&nbsp;NextaFlow</span>&nbsp;
             with Setup Done for You for Free—Yes, for Free!
