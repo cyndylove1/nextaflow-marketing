@@ -34,6 +34,7 @@ export default function Signup() {
     firstName: "",
     lastName: "",
     email: "",
+    telephone: "",
     password: "",
     referral: "",
     telephone: ""
