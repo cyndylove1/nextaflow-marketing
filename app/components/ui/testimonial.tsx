@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "We were paying for multiple tools that barely worked together. NeXtaFlow replaced all of them with one simple system. Everything from messaging to funnels and automation is now in one place — and their team handled the entire setup for us.",
+      "We were paying for multiple tools that barely worked together. NextaFlow replaced all of them with one simple system. Everything from messaging to funnels and automation is now in one place — and their team handled the entire setup for us.",
     name: "Sarah M.",
     role: "Real Estate Consultant",
     image: "/assets/testimonial8.PNG",
