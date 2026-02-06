@@ -16,7 +16,7 @@ export default function Footer() {
           <AnimatedItem index={0} delay={0.05}>
             {/* Brand */}
             <div className="max-w-xl">
-              <Image src={logo} alt="Nextaflow Logo" className="h-8 w-auto" />
+              <Image src={logo} alt="Nextaflow Logo" className="md:h-8 h-5 w-auto" />
               <p className="mt-4 max-w-sm lg:text-[16px] text-[13px] font-[300] text-[#1a1a1a]">
                 NextaFlow is an all-in-one CRM and automation platform designed
                 to help businesses grow without juggling multiple tools. We

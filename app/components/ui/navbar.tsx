@@ -19,7 +19,7 @@ export default function Navbar() {
         <Image
           src={logo}
           alt="Nextaflow logo"
-          className="h-8 w-auto"
+          className="md:h-8 h-5 w-auto"
           priority
         />
       </Link>
