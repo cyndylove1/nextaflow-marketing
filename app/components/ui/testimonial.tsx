@@ -16,31 +16,31 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "I used to spend 5 hours a day just replying to messages. Nestaflow’s team set up my automated replies, and now I only talk to customers who are ready to pay. It's like having a digital employee for free.",
+      "I used to spend 5 hours a day just replying to messages. NeXtaFlow’s team set up my automated replies, and now I only talk to customers who are ready to pay. It's like having a digital employee for free.",
     name: "Chidi A.",
     role: "Agency Owner",
-    image: "/assets/testimonial4.png",
+    image: "/assets/testimonial4.PNG",
   },
   {
     quote:
-      "Nestaflow helped us centralize all our communication and automate follow-ups. Our response time improved instantly, and conversions skyrocketed.",
+      "NextaFlow helped us centralize all our communication and automate follow-ups. Our response time improved instantly, and conversions skyrocketed.",
     name: "Amaka O.",
     role: "Marketing Consultant",
-    image: "/assets/testimonial7.png",
+    image: "/assets/testimonial7.PNG",
   },
   {
     quote:
       "The onboarding was seamless. Within 48 hours, everything was live and optimized. This tool pays for itself.",
     name: "Tunde K.",
     role: "E-commerce Founder",
-    image: "/assets/testimonial5.png",
+    image: "/assets/testimonial5.PNG",
   },
   {
     quote:
-      "We were paying for multiple tools that barely worked together. Nestaflow replaced all of them with one simple system. Everything from messaging to funnels and automation is now in one place — and their team handled the entire setup for us.",
+      "We were paying for multiple tools that barely worked together. NeXtaFlow replaced all of them with one simple system. Everything from messaging to funnels and automation is now in one place — and their team handled the entire setup for us.",
     name: "Sarah M.",
     role: "Real Estate Consultant",
-    image: "/assets/testimonial8.png",
+    image: "/assets/testimonial8.PNG",
   },
 ];
 
