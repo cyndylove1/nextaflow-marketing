@@ -1,32 +1,36 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 import Button from "../button";
+import Image from "next/image";
+import logo from "@/public/assets/Nextaflow.png";
 
 export default function Navbar() {
   return (
     <nav
       className="
-        fixed inset-x-0 top-0 z-50 
+        fixed top-0 inset-x-0 z-50
         bg-black text-white
         flex items-center justify-between
-        md:px-6 px-4 py-6
-        backdrop-blur-sm
+        px-4 md:px-6
+        h-20
       "
     >
-      {/* Brand */}
-      <Link href="/" className="text-xl font-semibold">
-        Nexta <span className="text-[var(--primary)]">Flow</span>
+      {/* Logo */}
+      <Link href="/" className="flex items-center">
+        <Image
+          src={logo}
+          alt="Nextaflow logo"
+          className="h-8 w-auto"
+          priority
+        />
       </Link>
 
-      {/* CTA button */}
-      <div className="hidden md:flex">
+      {/* CTA Button */}
+      <Link href="/sign-up" className="hidden md:flex items-center">
         <Button
           text="Start My Free 30-Days Trial"
           className="bg-[var(--secondary)] text-black"
         />
-      </div>
+      </Link>
     </nav>
   );
 }

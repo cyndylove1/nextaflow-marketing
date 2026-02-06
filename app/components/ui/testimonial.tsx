@@ -1,14 +1,10 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import { Navigation } from "lucide-react";
+import { AnimatedItem } from "../animatedItem";
 
 type Testimonial = {
   quote: string;
@@ -54,15 +50,21 @@ export default function Testimonial() {
       <div className="max-w-7xl mx-auto md:px-6 px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[16px] font-[500] uppercase text-[var(--primary)]">
-            Testimonial
-          </h2>
-          <h2 className="font-[500] py-4 text-4xl text-[var(--tertiary)]">
-            What Our Customers Say
-          </h2>
-          <p className="mt-4 font-[300] text-xl text-[var(--tertiary)]">
-            Real stories from businesses growing with NextaFlow
-          </p>
+          <AnimatedItem index={0} delay={0.05}>
+            <h2 className="text-[16px] font-[500] uppercase text-[var(--primary)]">
+              Testimonial
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem index={0} delay={0.1}>
+            <h2 className="font-[500] pt-4 md:text-4xl text-2xl text-[var(--tertiary)]">
+              What Our Customers Say
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem index={0} delay={0.15}>
+            <p className="mt-4 font-[300] text-xl text-[var(--tertiary)]">
+              Real stories from businesses growing with NextaFlow
+            </p>
+          </AnimatedItem>
         </div>
 
         {/* Swiper */}
@@ -85,7 +87,7 @@ export default function Testimonial() {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index} className="w-[320px] md:w-[320px]">
-              <div className="bg-[var(--secondary)] rounded-2xl p-8 shadow-xl border border-gray-200 h-full flex flex-col">
+              <div className="bg-[var(--secondary)] rounded-2xl p-4 md:p-8 shadow-xl border border-gray-200 h-full flex flex-col">
                 {/* Profile */}
                 <div className="flex items-center gap-4 mb-6">
                   <Image

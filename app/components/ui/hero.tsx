@@ -1,4 +1,4 @@
-"use client";
+import Link from "next/link";
 import { AnimatedItem } from "../animatedItem";
 import AvartarGroup from "../avatarGroup";
 import Button from "../button";
@@ -6,10 +6,10 @@ import Button from "../button";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-black">
-      <div className="mx-auto max-w-7xl md:px-6 px-4 py-24 text-center">
+      <div className="mx-auto max-w-7xl lg:px-14 md:px-6 px-4 py-24 text-center">
         {/* Headline */}
         <AnimatedItem index={0} delay={0.05}>
-          <h1 className="mx-auto max-w-3xl text-4xl text-2xl font-[400] leading-tighter text-[var(--tertiary)] md:text-5xl md:pt-20 pt-16">
+          <h1 className="mx-auto max-w-3xl md:text-4xl text-2xl font-[400] leading-tighter text-[var(--tertiary)] md:text-5xl md:pt-20 pt-16">
             30 Days Free Trial for
             <span className="text-[var(--primary)]">&nbsp;NextaFlow</span>&nbsp;
             with Setup Done for You for Free—Yes, for Free!
@@ -28,10 +28,12 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4">
           {/* button */}
           <AnimatedItem index={0} delay={0.15}>
-            <Button
-              text="Start My Free 30-Days Trial"
-              className="bg-[var(--secondary)] text-black"
-            />
+            <Link href="/sign-up">
+              <Button
+                text="Start My Free 30-Days Trial"
+                className="bg-[var(--secondary)] text-black"
+              />
+            </Link>
           </AnimatedItem>
 
           <div className="flex items-center gap-6">
@@ -48,12 +50,11 @@ export default function Hero() {
             </AnimatedItem>
           </div>
         </div>
-
         {/* Video*/}
         <div className="mt-14">
           <div className="relative aspect-video overflow-hidden rounded-2xl bg-white">
             <div className="flex h-full items-center justify-center text-gray-400 bg-white">
-              <video autoPlay muted loop className="w-full h-full">
+              <video autoPlay playsInline muted loop className="w-full h-full">
                 <source
                   src="/video/Dropbox_Homepage - Copy.mp4"
                   type="video/mp4"

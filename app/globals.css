@@ -9,8 +9,45 @@
   
 }
 
-
 body {
   scroll-behavior: smooth;
   font-family: var(--poppins);
+}
+.preloader-exit {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.fade-animation {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+/* Loading text pulse */
+@keyframes textPulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.loading-text {
+  animation: textPulse 1.5s ease-in-out infinite;
+  letter-spacing: 0.3em;
 }

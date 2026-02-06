@@ -1,42 +1,92 @@
-"use client";
-
-import React from "react";
-import Link from "next/link";
 import Button from "../button";
+import Image from "next/image";
+import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
+import { AnimatedItem } from "../animatedItem";
+import logo from "@/public/assets/Nextaflow-allblk.png";
+import Link from "next/link";
+
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--secondary)] border-[1px] border-white/30 pt-6 text-gray-300">
-      <div className="max-w-7xl mx-auto md:px-6 px-4 py-16">
+    <footer className="bg-[#f7f7f7] border-[1px] border-white/30 pt-6 text-gray-300">
+      <div className="md:px-6 px-4 pt-16">
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
-          {/* Brand */}
-          <div className="max-w-xl text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-[#1a1a1a]">NextaFlow</h3>
-            <p className="mt-4 max-w-lg text-[16px] font-[300] text-[#1a1a1a]">
-              NextaFlow is an all-in-one CRM and automation platform designed to
-              help businesses grow without juggling multiple tools. We don’t
-              just give you the software we set it up for you.
-            </p>
-          </div>
+        <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12">
+          <AnimatedItem index={0} delay={0.05}>
+            {/* Brand */}
+            <div className="max-w-xl">
+              <Image src={logo} alt="Nextaflow Logo" className="h-8 w-auto" />
+              <p className="mt-4 max-w-sm lg:text-[16px] text-[13px] font-[300] text-[#1a1a1a]">
+                NextaFlow is an all-in-one CRM and automation platform designed
+                to help businesses grow without juggling multiple tools. We
+                don’t just give you the software — we set it up for you.
+              </p>
+            </div>
+          </AnimatedItem>
+          <AnimatedItem index={0} delay={0.1}>
+            {/* Contact Info */}
+            <div className="space-y-2 text-[#1a1a1a] pt-8 md:pt-0">
+              <h2>Address</h2>
+              <div className="flex items-center gap-2">
+                <MdLocationOn size={20} />
+                <span className="font-[300] max-w-sm lg:text-[16px] text-[13px]">
+                  {" "}
+                  7404 Executive place, Lanham MD 20706, United States
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MdEmail size={20} />
+                <span className="font-[300] lg:text-[16px] text-[13px]">
+                  info@edoubleone.net
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MdPhone size={20} />
+                <span className="font-[300] lg:text-[16px] text-[13px]">
+                  +1 (202) 971-0392
+                </span>
+              </div>
+            </div>
+          </AnimatedItem>
 
-          {/* Signup */}
-          <div className="text-center md:text-right">
-            <p className="text-sm text-[#1a1a1a] mb-4">
-              Start your 30-day free trial with free setup.
-            </p>
-            <Button text=" Sign Up for Free" className="bg-black text-white" />
+          <div className="flex-col flex md:mt-0 mt-8">
+            {/* Signup */}
+            <Link href="/sign-up" className="text-center md:text-right">
+              <Button text="Sign Up for Free" className="bg-black text-white" />
+            </Link>
+            <AnimatedItem index={0} delay={0.15}>
+              {/* Social Icons */}
+              <div className="flex gap-2 items-center mt-4">
+                <h2 className="text-black lg:text-[16px] text-[13px] font-[300]">
+                  Follow Us :
+                </h2>
+                <div className="flex justify-center gap-4">
+                  {/* Twitter */}
+                  <div className="bg-black text-white h-8 w-8 flex items-center justify-center rounded-full border border-transparent transition-all duration-300 hover:bg-black hover:text-white hover:scale-110 cursor-pointer">
+                    <FaTwitter size={20} />
+                  </div>
 
-            <p className="mt-3 text-xs text-[#1a1a1a]">
-              No credit card required · Cancel anytime
-            </p>
+                  {/* Instagram */}
+                  <div className="bg-black text-white h-8 w-8 flex items-center justify-center rounded-full border border-transparent transition-all duration-300 hover:bg-black hover:text-white hover:scale-110 cursor-pointer">
+                    <FaInstagram size={20} />
+                  </div>
+
+                  {/* LinkedIn */}
+                  <div className="bg-black text-white h-8 w-8 flex items-center justify-center rounded-full border border-transparent transition-all duration-300 hover:bg-black hover:text-white hover:scale-110 cursor-pointer">
+                    <FaLinkedin size={20} />
+                  </div>
+                </div>
+              </div>
+            </AnimatedItem>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/10 mt-14 pt-6 text-center text-[13px] text-[#1a1a1a] font-[200]">
-          © 2026 NextaFlow. All rights reserved.
-        </div>
+        <AnimatedItem index={0} delay={0.25}>
+          {/* Divider */}
+          <div className="border-t border-white/10 pt-24 pb-10 text-center text-[13px] text-[#1a1a1a] font-[200]">
+            © 2026 NextaFlow. All rights reserved.
+          </div>
+        </AnimatedItem>
       </div>
     </footer>
   );

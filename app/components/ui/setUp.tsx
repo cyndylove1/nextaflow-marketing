@@ -1,5 +1,5 @@
-import React from "react";
 import { UserPlus, PhoneCall, Settings, TrendingUp } from "lucide-react";
+import { AnimatedItem } from "../animatedItem";
 
 type Step = {
   title: string;
@@ -38,38 +38,44 @@ export default function Setup()  {
       <div className="max-w-5xl mx-auto md:px-4">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-[16px] uppercase font-[500] text-[var(--primary)]">
-            How the Free Setup Works
-          </h2>
-          <p className="mt-3 text-2xl text-[#1a1a1a]">
-            A hands-off onboarding experience designed for fast results
-          </p>
+          <AnimatedItem index={0} delay={0.05}>
+            <h2 className="text-[16px] uppercase font-[500] text-[var(--primary)]">
+              How the Free Setup Works
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem index={0} delay={0.1}>
+            <p className="mt-3 md:text-2xl text-xl text-[#1a1a1a]">
+              A hands-off onboarding experience designed for fast results
+            </p>
+          </AnimatedItem>
         </div>
 
         {/* Timeline */}
         <div className="relative space-y-10 lg:px-20 px-4">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              {/* Icon */}
-              <div className="absolute lg:-left-[29px] -left-[14px] lg:top-0 -top-[14px] w-14 h-14 rounded-full bg-[var(--secondary)] flex items-center justify-center shadow-lg">
-                {step.icon}
+            <AnimatedItem key={index} index={index} delay={0.15 * index}>
+              <div key={index} className="relative">
+                {/* Icon */}
+                <div className="absolute lg:-left-[29px] -left-[14px] lg:top-0 -top-[14px] w-14 h-14 rounded-full bg-[var(--secondary)] flex items-center justify-center shadow-lg">
+                  {step.icon}
+                </div>
+
+                {/* Content Card */}
+                <div className="bg-[#f7f7f7] p-8 rounded-xl border border-[#e2e2e2]">
+                  <span className="text-sm font-[400] text-[#1a1a1a]">
+                    Step {index + 1}
+                  </span>
+
+                  <h3 className="mt-2 text-xl font-[400] text-[#1a1a1a] ">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 text-[#1a1a1a] font-[300]">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-
-              {/* Content Card */}
-              <div className="bg-[#f7f7f7] p-8 rounded-xl border border-[#e2e2e2]">
-                <span className="text-sm font-[400] text-[#1a1a1a]">
-                  Step {index + 1}
-                </span>
-
-                <h3 className="mt-2 text-xl font-[400] text-[#1a1a1a] ">
-                  {step.title}
-                </h3>
-
-                <p className="mt-3 text-[#1a1a1a] font-[300]">
-                  {step.description}
-                </p>
-              </div>
-            </div>
+            </AnimatedItem>
           ))}
         </div>
       </div>

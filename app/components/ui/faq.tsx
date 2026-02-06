@@ -1,6 +1,5 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+import { AnimatedItem } from "../animatedItem";
 
 type FAQItem = {
   question: string;
@@ -46,43 +45,48 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto md:px-6 px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-[400] text-gray-900">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-lg text-gray-600 font-[300]">
-            Answers to the most common questions about NextaFlow
-          </p>
+          <AnimatedItem index={0} delay={0.05}>
+            <h2 className="text-2xl md:text-4xl font-[400] text-gray-900">
+              Frequently Asked Questions
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem index={0} delay={0.1}>
+            <p className="mt-4 text-lg text-gray-600 font-[300]">
+              Answers to the most common questions about NextaFlow
+            </p>
+          </AnimatedItem>
         </div>
 
         {/* Accordion */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-[2px] border-[var(--primary)] rounded-lg overflow-hidden"
-            >
-              {/* Question Button */}
-              <button
-                onClick={() => toggle(index)}
-                className="w-full text-left px-6 py-4 bg-white flex justify-between items-center font-medium text-[20px] text-gray-900"
-              >
-                {faq.question}
-                <span className="ml-2 text-white flex items-center justify-center rounded-full bg-black h-[30px] w-[30px] transition-transform duration-300">
-                  {openIndex === index ? "-" : "+"}
-                </span>
-              </button>
-
-              {/* Answer with smooth height transition */}
+            <AnimatedItem key={index} index={index} delay={0.15 * index}>
               <div
-                ref={(el) => {
-                  refs.current[index] = el;
-                }}
-                className="px-6 py-0 bg-[var(--primary)] text-white overflow-hidden text-[15px] font-[300] transition-all duration-500"
-                style={{ maxHeight: "0px" }}
+                key={index}
+                className="border-[2px] border-[var(--primary)] rounded-lg overflow-hidden"
               >
-                <div className="py-4 text-[15px]">{faq.answer}</div>
+                {/* Question Button */}
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full text-left px-6 py-4 bg-white flex justify-between items-center font-medium text-[20px] text-gray-900"
+                >
+                  {faq.question}
+                  <span className="ml-2 text-white flex items-center justify-center rounded-full bg-black h-[30px] w-[30px] transition-transform duration-300">
+                    {openIndex === index ? "-" : "+"}
+                  </span>
+                </button>
+                {/* transition */}
+                <div
+                  ref={(el) => {
+                    refs.current[index] = el;
+                  }}
+                  className="px-6 py-0 bg-[var(--primary)] text-white overflow-hidden text-[15px] font-[300] transition-all duration-500"
+                  style={{ maxHeight: "0px" }}
+                >
+                  <div className="py-4 text-[15px]">{faq.answer}</div>
+                </div>
               </div>
-            </div>
+            </AnimatedItem>
           ))}
         </div>
       </div>
