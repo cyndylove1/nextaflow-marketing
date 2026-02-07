@@ -268,12 +268,6 @@ export default function Signup() {
               Join business owners who 5X their business by trading app fatigue
               for growth.
             </p>
-
-            {signupMutation.isError && (
-              <p className="text-red-500 text-sm text-center">
-                {(signupMutation.error as Error).message}
-              </p>
-            )}
           </form>
         </div>
       </div>
