@@ -4,7 +4,7 @@ import logo from "@/public/assets/Nextaflow-allblk.png";
 
 export default function SuccessfulModal() {
   return (
-    <div className="bg-[#f7f7f7] min-h-screen">
+    <div className="bg-white min-h-screen">
       {/* logo */}
       <Link href="/">
         <div className="p-6">
@@ -19,7 +19,7 @@ export default function SuccessfulModal() {
       </Link>
 
       <div className="flex items-center justify-center">
-        <div className="bg-white my-[4rem] w-[455px] rounded-[24px] p-6 relative dm-font leading-[100%] shadow-md">
+        <div className="bg-[#f7f7f7] my-[8rem] w-[455px] rounded-[24px] p-6 relative dm-font leading-[100%] shadow-md">
           <div className="text-center">
             <h2 className="text-[26px] font-[500] pt-10 text-[#1a1a1a]">
               Congratulations! 🎉
