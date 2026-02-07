@@ -1,4 +1,6 @@
 import { AnimatedItem } from "../components/animatedItem";
+import Footer from "../components/ui/footer";
+import Navbar from "../components/ui/navbar";
 
 export default function PrivacyPolicy() {
   const sections = [
@@ -64,7 +66,8 @@ export default function PrivacyPolicy() {
   ];
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white pt-16">
+      <Navbar />
       <div className="rounded-2xl md:px-6 px-4 pt-14">
         <h1 className="md:text-3xl text-xl font-[500] text-[#1a1a1a] my-4">
           Privacy Policy
@@ -106,6 +109,7 @@ export default function PrivacyPolicy() {
           </AnimatedItem>
         ))}
       </div>
+      <Footer />
     </section>
   );
 }

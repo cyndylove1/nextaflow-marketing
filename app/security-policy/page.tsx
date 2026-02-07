@@ -1,4 +1,6 @@
 import { AnimatedItem } from "../components/animatedItem";
+import Footer from "../components/ui/footer";
+import Navbar from "../components/ui/navbar";
 
 export default function SecurityPolicy() {
   const sections = [
@@ -55,7 +57,8 @@ export default function SecurityPolicy() {
   ];
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white pt-16">
+      <Navbar />
       <div className="md:px-6 px-4">
         <h1 className="text-3xl font-semibold text-[#1a1a1a] pt-14 pb-6">
           Security Policy
@@ -91,6 +94,7 @@ export default function SecurityPolicy() {
           </AnimatedItem>
         ))}
       </div>
+      <Footer />
     </section>
   );
 }

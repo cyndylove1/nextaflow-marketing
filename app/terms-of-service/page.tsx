@@ -1,4 +1,6 @@
 import { AnimatedItem } from "../components/animatedItem";
+import Footer from "../components/ui/footer";
+import Navbar from "../components/ui/navbar";
 
 export default function TermsOfService() {
   const sections = [
@@ -51,7 +53,8 @@ export default function TermsOfService() {
   ];
 
   return (
-    <section className="bg-white py-16 ">
+    <section className="bg-white pt-16">
+      <Navbar />
       <div className="md:px-6 px-4">
         <h1 className="md:text-3xl font-[500] text-xl text-[#1a1a1a] pt-14 pb-6">
           Terms of Service
@@ -80,6 +83,7 @@ export default function TermsOfService() {
           </AnimatedItem>
         ))}
       </div>
+      <Footer />
     </section>
   );
 }

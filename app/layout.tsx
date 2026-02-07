@@ -30,9 +30,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased`}>
         <Preloader duration={2000}>
           <QueryProvider>
-            <Navbar />
             {children}
-            <Footer />
             <ToastContainer
               limit={1}
               position="top-right"

@@ -19,7 +19,7 @@ export default function Footer() {
     : "/sign-up";
 
   return (
-    <footer className="bg-[#f7f7f7] border-[1px] border-white/30 pt-6 text-gray-300">
+    <footer className="bg-[#f7f7f7] border-[1px] border-white/30 pt-6 text-gray-300 h-full">
       <div className="md:px-6 px-4 pt-16">
         {/* Top Section */}
         <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12">

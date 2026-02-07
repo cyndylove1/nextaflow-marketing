@@ -29,7 +29,7 @@ export default function Navbar() {
       "
     >
       {/* Logo */}
-      <Link href={homeLink} className="flex items-center">
+      <Link href="/" className="flex items-center">
         <Image
           src={logo}
           alt="Nextaflow logo"

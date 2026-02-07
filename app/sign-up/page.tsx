@@ -146,6 +146,19 @@ export default function Signup() {
 
   return (
     <section className="bg-black pb-16 px-4 md:px-6">
+      {/* Logo */}
+      <div className="p-6">
+        <Link href={homeLink} className="flex items-center">
+          <Image
+            src={logo}
+            alt="Nextaflow logo"
+            className="md:h-8 h-5 w-auto"
+            width={200}
+            height={200}
+            priority
+          />
+        </Link>
+      </div>
 
       <div className="max-w-lg mx-auto bg-white mt-10 rounded-3xl overflow-hidden">
         <div className="md:px-8 px-4 py-10">
