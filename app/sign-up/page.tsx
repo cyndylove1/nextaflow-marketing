@@ -16,7 +16,7 @@ interface FormData {
   firstName: string;
   lastName: string;
   email: string;
-  // telephone: string;
+  telephone: string;
   password: string;
 }
 
@@ -26,7 +26,7 @@ export default function Signup() {
     firstName: "",
     lastName: "",
     email: "",
-    // telephone: "",
+    telephone: "",
     password: "",
   });
 
@@ -68,7 +68,7 @@ export default function Signup() {
         firstname: data.firstName,
         lastname: data.lastName,
         email: data.email.toLowerCase(),
-        // telephone: data.telephone,
+        telephone: data.telephone,
         password: data.password,
       };
 
@@ -89,7 +89,7 @@ export default function Signup() {
         firstName: "",
         lastName: "",
         email: "",
-        // telephone: "",
+        telephone: "",
         password: "",
       });
     },
@@ -185,7 +185,7 @@ export default function Signup() {
             </div>
 
             {/* Phone Number */}
-            {/* <div>
+            <div>
               <Label text="Phone Number" />
               <Input
                 placeholder="Phone number"
@@ -195,7 +195,7 @@ export default function Signup() {
                 onChange={handleChange}
                 required
               />
-            </div> */}
+            </div>
 
             {/* Password */}
             <div>
