@@ -7,7 +7,7 @@ export default function SecurityPolicy() {
     {
       title: "Security Infrastructure",
       description:
-        "Nextaflow maintains a comprehensive security infrastructure designed to protect your business data, customer information, and automation workflows. Our security framework includes:",
+        "NextaFlow maintains a comprehensive security infrastructure designed to protect your business data, customer information, and automation workflows. Our security framework includes:",
       list: [
         "Enterprise-grade SSL/TLS encryption for all data transmission",
         "Multi-layer security architecture with firewalls and intrusion detection",
@@ -24,7 +24,7 @@ export default function SecurityPolicy() {
     {
       title: "Access Control and Authentication",
       description:
-        "Nextaflow implements strong authentication mechanisms including password requirements, two-factor authentication (2FA), and session management. All user access is logged and monitored. Administrative access is restricted to authorized personnel only and requires multi-factor authentication. API keys and tokens are encrypted and regularly rotated.",
+        "NextaFlow implements strong authentication mechanisms including password requirements, two-factor authentication (2FA), and session management. All user access is logged and monitored. Administrative access is restricted to authorized personnel only and requires multi-factor authentication. API keys and tokens are encrypted and regularly rotated.",
     },
     {
       title: "Incident Response and Monitoring",

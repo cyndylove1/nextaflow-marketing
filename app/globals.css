@@ -13,6 +13,7 @@ body {
   scroll-behavior: smooth;
   font-family: var(--poppins);
 }
+
 .preloader-exit {
   opacity: 0;
   transition: opacity 0.5s ease;
