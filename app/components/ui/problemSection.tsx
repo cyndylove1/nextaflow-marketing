@@ -7,7 +7,7 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    title: "The Problem",
+    title: "The Challenge",
     description:
       "Tired of paying for 10 different apps that don’t talk to each other? Struggling to scale your business and reach out to leads effectively? Managing tools, data, and workflows separately slows you down and costs you more.",
   },
@@ -26,7 +26,7 @@ export default function ProblemSection() {
         <div className="text-center mb-14">
           <AnimatedItem index={0} delay={0.05}>
             <h2 className="text-[16px] uppercase font-[500] text-[var(--primary)]">
-              The Problem & Solution
+              The Business Challenges and Solutions
             </h2>
           </AnimatedItem>
           <AnimatedItem index={0} delay={0.1}>

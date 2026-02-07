@@ -6,7 +6,7 @@ export default function SuccessfulModal() {
   return (
     <div className="bg-white min-h-screen">
       {/* Logo */}
-      <div className="p-6">
+      <div className="md:p-6 px-4 pt-6">
         <Link href="/" className="flex items-center">
           <Image
             src={logo}
@@ -20,7 +20,7 @@ export default function SuccessfulModal() {
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="bg-[#f7f7f7] my-[4rem] w-[455px] rounded-[24px] p-6 relative dm-font leading-[100%] shadow-md">
+        <div className="bg-[#f7f7f7] my-[4rem] mx-4 md:mx-0 w-[455px] rounded-[24px] p-6 relative dm-font leading-[100%] shadow-md">
           <div className="text-center">
             <h2 className="text-[26px] font-[500] pt-10 text-[#1a1a1a]">
               Congratulations! 🎉
