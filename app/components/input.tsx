@@ -15,7 +15,7 @@ export default function Input({
   placeholder,
   className,
   id,
-  required = true,
+  required,
   type,
   value,
   name,

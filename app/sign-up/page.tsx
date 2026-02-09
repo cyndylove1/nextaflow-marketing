@@ -14,6 +14,7 @@ import Input from "../components/input";
 import InputPassword from "../components/inputPassword";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import { ghlClient } from "@/lib/ghl";
 
 interface FormData {
   firstName: string;
@@ -83,55 +84,35 @@ export default function Signup() {
   };
   const signupMutation = useMutation({
     mutationFn: async (data: FormData) => {
-      const payload = {
-        firstname: data.firstName,
-        lastname: data.lastName,
+      const ghlPayload: any = {
+        firstName: data.firstName,
+        lastName: data.lastName,
         email: data.email.toLowerCase(),
-        telephone: data.telephone,
-        password: data.password,
-        referral: data.referral,
+        phone: data.telephone,
+        locationId: process.env.NEXT_PUBLIC_GHL_LOCATION_ID,
       };
 
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/register`,
-        payload,
-        {
-          headers: { "Content-Type": "application/json" },
-        },
-      );
-      if (res.data.status === "error") {
-        throw res.data;
+      // add tags only if referral exists
+      if (data.referral?.trim()) {
+        ghlPayload.tags = ["signup", `ref-${data.referral}`];
+      } else {
+        ghlPayload.tags = ["signup"];
       }
+
+      const res = await ghlClient.post("/contacts/", ghlPayload);
 
       return res.data;
     },
 
-    onSuccess: (data) => {
-      toast.success(data.message);
+    onSuccess: () => {
+      toast.success("Signup successful");
       router.push("/successful");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        telephone: "",
-        password: "",
-        referral: "",
-      });
     },
-    onError: (error: any) => {
-      const errorsObj = error?.errors;
 
-      if (errorsObj && typeof errorsObj === "object") {
-        Object.values(errorsObj)
-          .flat()
-          .forEach((msg) => {
-            if (typeof msg === "string") {
-              toast.error(msg);
-            }
-          });
-      } else {
-        toast.error(error?.message);
-      }
+    onError: (error: any) => {
+      toast.error(
+        error?.response?.data?.message || "Failed to send data to GHL",
+      );
     },
   });
 
