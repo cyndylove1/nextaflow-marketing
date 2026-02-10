@@ -189,12 +189,16 @@ export default function Signup() {
             <div>
               <Label text="Phone Number" />
               <PhoneInput
-                country="ng"
+                country="us"
                 value={formData.telephone}
                 onChange={(phone) =>
                   setFormData((prev) => ({ ...prev, telephone: phone }))
                 }
-                containerStyle={{ height: "40px", borderRadius: "5px" }}
+                containerStyle={{
+                  height: "40px",
+                  borderRadius: "5px",
+                  color: "#1a1a1a",
+                }}
                 inputStyle={{
                   height: "40px",
                   width: "100%",
