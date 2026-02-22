@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NextaFlow-Marketing",
+  title: "NextaFlow-free trial",
   description:
     "NextaFlow is an all-in-one CRM and automation platform designed to help businesses grow ",
 };
